@@ -9,6 +9,15 @@ data = pandas.read_csv("weather_data/weatheryear.csv")
 col_names = data.columns.values.tolist()
 print col_names
 
+
+def replace_whitespace(col_list, char='_'):
+    newList = []
+    for colNames in col_list:
+        newName = colNames.strip() 
+        newList.append(newName)
+    print newList
+
+
 # STEP 1 - Define a function below called "replace_whitespace" that can replace characters in a string with another character specified in the function parameter. The function should take two parameters, the first being the string that needs whitespace characters replacing, and the second being the character to insert instead of the whitespace. The keyword argument for the replacement character should be the '_' character.
 
 
